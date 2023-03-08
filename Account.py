@@ -1,25 +1,43 @@
 # Thong tin chung ve tai khoan
 ## id, password, status
+''''''
 class Account:
     # def __init__(self, id, password, status=)
     pass
 
+
 # Tai khoan cua nguoi ben nguoi truong
-# Quyen loi: Doc mot so cuon sach Free, khong muon duoc sach
+'''
+- Log In / Sign Up / Log Out / Reset Password (function)
+- Search Book: by Title, Author, Subject (function)
+- Read free Book
+- View/ Change Profile: Profile, Store
+'''
 class Guest(Account):
     pass
 
+
 # Tai khoan danh cho sinh vien
-# Quyen loi: Doc tat ca cac cuon sach, duoc muon toi da 5 cuon sach trong 1 thoi diem
+'''
+- Register: Borrow / Return Book
+- Read full Book
+'''
 class Student(Guest):
     pass
 
 # Tai khoan danh cho giao vien
-# Quyen loi: Duoc muon so sack khong gioi han, yeu cau mua, cap nhat them sach
+'''
+- Request add Book
+- Download pdf file
+'''
 class Teacher(Account):
     pass
 
 # Tai khoan cua admin
+'''
+- Edit/ Add/ Remove Book
+- Edit/ Block/ Unblock/ Remove Member
+'''
 class Admin(Account):
     pass
 
