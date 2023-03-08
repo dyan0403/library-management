@@ -1,0 +1,16 @@
+Cac tai khoan
+# Tai khoan cua nguoi ben nguoi truong
+Quyen loi: Doc mot so cuon sach Free, khong muon duoc sach
+
+# Tai khoan danh cho sinh vien
+# Quyen loi: Doc tat ca cac cuon sach, duoc muon toi da 5 cuon sach trong 1 thoi diem
+
+# Tai khoan danh cho giao vien
+# Quyen loi: Duoc muon so sack khong gioi han, yeu cau mua, cap nhat them sach
+-----------------------------------
+
+Muon sach thu vien: duoc doc online file pdf.
+De muon sach, dang ky tren he thong -> sinh ra ma CODEBAR xac nhan (co tac dung trong 24h),\
+sau do den truc tiep thu vien de nhan sach. Neu thanh cong thi duoc tai khoan admin xac nhan \
+muon sach thanh cong thong qua CODEBAR. Neu khong thanh cong, ma CODEBAR se bi huy, giai phong \
+cac cuon sach duoc dang ky.
