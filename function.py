@@ -31,3 +31,13 @@ def log_out():
 ## Yeu cau: tuong tu Sign Up
 def reset_password():
     pass
+
+class Address:
+    def __init__(self,province, district, ward, street = ""):
+        self.province = province
+        self.district = district
+        self.ward = ward
+        self.streeet = street
+    
+    def __call__(self):
+        return f"{self.province}, {self.district}, {self.ward}, {self.streeet}"

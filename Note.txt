@@ -3,24 +3,24 @@ Cac tai khoan
 Quyen loi: Doc mot so cuon sach Free, khong muon duoc sach
 
 # Tai khoan danh cho sinh vien
-# Quyen loi: Doc tat ca cac cuon sach, duoc muon toi da 5 cuon sach trong 1 thoi diem
+# Quyen loi: Doc tat ca cac cuon sach, duoc muon toi da 5 cuon sach trong 1 thoi diem, sach muon toi da 30 ngay
 
 # Tai khoan danh cho giao vien
-# Quyen loi: Duoc muon so sach khong gioi han, yeu cau mua, cap nhat them sach
+# Quyen loi: Duoc muon so sach khong gioi han, yeu cau mua, cap nhat them sach, thoi gian muon sach 6 thang
 -----------------------------------
 
 Book:
 - INIT: id, title, authors[], subject[], number of pages, (address(rack[]) for paperbook), \
-format(HARDCOVER, PAPERBACK, AUDIO_BOOK, EBOOK, NEWSPAPER, MAGAZINE), \
-status(LENT, PENDING, FREE).
+format(HARDCOVER, PAPERBACK, AUDIO_BOOK, EBOOK, NEWSPAPER, MAGAZINE, None), \
+status(LENT, PENDING, FREE, None).
 % id: xxxxxxxxxx: 6 chu so dau danh cho ten sach, 4 chu so sau la danh cho so luong sach.
 - 
 *Database: so luong sach(dua vao so luong sach có cung 6 chu so dau id)
 -----------------------------------
 
 Member:
-- INIT: name, email, phone, (address(dict{Province, District, Ward, others})), \
-status(ACTIVE, BLOCK, CANCEL), types(GUEST, STUDENT, TEACHER)
+- INIT: name, email, phone, (Class address()), \
+status(ACTIVE, BLOCK, CANCEL, None), types(GUEST, STUDENT, TEACHER, None)
 *Database: 
 -----------------------------------
 

@@ -1,9 +1,15 @@
 # Thong tin chung ve tai khoan
 ## id, password, status
-''''''
+'''
+'''
 class Account:
-    # def __init__(self, id, password, status=)
-    pass
+    # def __init__(self, id, password, status=True)
+    def __init__(self, email, password, status=None, type=None):
+        pass
+    
+    # Them cac noi dung: Ten, dia chi, phone. Luu y Address la 1 class, khoi tao bang cach Address(province, district, ward, street="")
+    def add_info(self, name, Address, phone):
+        pass
 
 
 # Tai khoan cua nguoi ben nguoi truong
@@ -39,7 +45,39 @@ class Teacher(Account):
 - Edit/ Block/ Unblock/ Remove Member
 '''
 class Admin(Account):
-    pass
+    def __init__(self) -> None:
+        super().__init__()
+        pass
+
+    ## BOOK
+    # add Book. + Add to database
+    def add_book(self, Book):
+        pass
+
+    # remove Book + Delete in database
+    def remove_book(self, Book):
+        pass
+
+    # sua noi dung sach. Parameters: id/name/... , nội dung edit + Edit in database
+    def edit_book(self, Book, feature, edit):
+        pass
+    
+    ## MEMBER
+    # edit member. Parameters: id/name/... , nội dung edit + Edit in database
+    def edit_member(self, Member, features, edit):
+        pass
+
+    # remove member + Delete in database
+    def remove_member(self, Member):
+        pass
+
+    # sua noi dung member. Parameters: id/name/... , nội dung edit + Update in database
+    def block_member(self, Member):
+        pass
+
+    # sua noi dung member. Parameters: id/name/... , nội dung edit + Update in database
+    def unblock_member(self, Member):
+        pass
 
 # Luu tru thong tin cua cac Account Member
 ## name, address, email, number phone
