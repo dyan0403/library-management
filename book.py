@@ -1,5 +1,5 @@
 class Book:
-    # creat_book
+    # creat_book. MUST Set auto ID
     def __init__(self, title, authors=[], subject=[], number_of_pages=None, add_rack=None, format=None, status=None):
         pass
 
