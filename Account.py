@@ -3,7 +3,7 @@
 '''
 '''
 class Account:
-    # def __init__(self, id, password, status=True)
+    # def __init__(self, id, password, status=True). Them self cua cac add_info duoi dang None
     def __init__(self, email, password, status=None, type=None):
         pass
     
@@ -20,6 +20,10 @@ class Account:
 - View/ Change Profile: Profile, Store
 '''
 class Guest(Account):
+    def __init__(self, email, password, status=None, type=None):
+        super().__init__(email, password, status, type)
+    
+    def info(self)
     pass
 
 
