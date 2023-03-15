@@ -1,12 +1,8 @@
 class User:
-    def __init__(self, username, password):
+    def __init__(self, username, password, new_password):
         self.username = username
         self.password = password
-
-    def change_password(self, new_password):
-        self.password = new_password
-        print("Thay đổi mật khẩu thành công!")
-
+        self.new_password = new_password
 
 class Library:
     def __init__(self):
@@ -43,8 +39,12 @@ class Library:
         # Thay đổi mật khẩu người dùng đang đăng nhập
         if self.logged_in_user:
             if self.logged_in_user.password == current_password:
-                self.logged_in_user.change_password(new_password)
+                if self.logged_in_user.password == new_password:
+                    print("Mật khẩu mới trùng với mật khẩu hiện tại")
+                else:
+                    self.logged_in_user.password = new_password
+                    print("Thay đổi mật khẩu thành công!")
             else:
-                print("Mật khẩu mới bị trùng với mật khẩu hiện tại")
+                print("Nhập sai mật khẩu hiện tại")
         else:
             print("Bạn phải đăng nhập để đổi mật khẩu")
