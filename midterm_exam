@@ -6,21 +6,11 @@ class code_info:
         self.__code = code
         self.__language = language
 
-    def get_string(self):
-        code_string = str(self.get_code())
-        list_string = []
-        for i in code_string:
-            list_string.append(i)
-        return list_string
-
     def get_method(self):
         list_method = []
         for i in dir(self.__code):
             list_method.append(i)
         return list_method
-
-    def get_len_code(self):
-        return len(self.get_string())
 
     def get_len_method(self):
         return len(self.get_method())
