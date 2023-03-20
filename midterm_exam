@@ -3,8 +3,8 @@
 class code_info:
 
     def __init__(self, code, language: str):
-        self._code = code
-        self.language = language
+        self.__code = code
+        self.__language = language
 
     def get_string(self):
         code_string = str(self.get_code())
@@ -15,7 +15,7 @@ class code_info:
 
     def get_method(self):
         list_method = []
-        for i in dir(self._code):
+        for i in dir(self.__code):
             list_method.append(i)
         return list_method
 
@@ -26,9 +26,9 @@ class code_info:
         return len(self.get_method())
 
     def get_code(self):
-        code = self._code
+        code = self.__code
         return code
 
     def get_language(self):
-        language = self.language
+        language = self.__language
         return language
