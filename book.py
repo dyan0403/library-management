@@ -31,7 +31,7 @@ class Book:
         print("\t \t Book's Number: ", self.number_of_book)
 
 
-class Library:
+class Library_Managements:
     def __init__(self):
         self.books = []
 
