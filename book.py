@@ -1,19 +1,12 @@
 class Book:
-    count = 0
 
     def __init__(self, title, author, number_of_book, subject, number_of_page, add_rack=None):
-        Book.count += 1
-        self.id = self.generate_id()
         self.title = title
         self.author = author
         self.subject = subject
         self.number_of_page = number_of_page
+        self.add_rack = add_rack
         self.number_of_book = number_of_book
-
-    def generate_id(self):
-        # Tạo ID cho sách
-        book_id = '{:06d}{:04d}'.format(Book.count, self.number_of_book)
-        return book_id
 
     def create_book(self):
         self.title = input("\t Enter Name of the Book:")
@@ -31,18 +24,28 @@ class Book:
 
 
 class Library_Managements:
+    count = 0
+    
     def __init__(self):
         self.books = []
+        self.id = self.generate_id()
+        Book.count += 1
 
     def add_book(self, title, author, subject, number_of_page, number_of_book):
-        # Tạo ID mới cho sách
+        #Thêm sách
         book = Book(title, author, number_of_book, subject, number_of_page)
         self.books.append(book)
+
+    def generate_id(self):
+       # Tạo ID cho sách
+        book_id = '{:06d}{:04d}'.format(Book.count, self.number_of_book)
+        return book_id
 
     def display_books(self):
         # Hiển thị danh sách các cuốn sách trong thư viện
         for book in self.books:
-            print(f"ID: {book.id} | Title: {book.title} | Author: {book.author} | Category: {book.subject} | Number: {book.number_of_book}")
+            print(
+                f"ID: {book.id} | Title: {book.title} | Author: {book.author} | Category: {book.subject} | Number: {book.number_of_book}")
 
 
 class Search:
