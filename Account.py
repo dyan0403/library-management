@@ -84,6 +84,6 @@ class Admin(Account):
         pass
 
 # Luu tru thong tin cua cac Account Member
-## name, address, email, number phone
+## name, address, email, number phone.
 class Person:
     pass
