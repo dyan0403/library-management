@@ -8,7 +8,6 @@ class Book:
         self.author = author
         self.subject = subject
         self.number_of_page = number_of_page
-        self.add_rack = add_rack
         self.number_of_book = number_of_book
 
     def generate_id(self):
@@ -24,7 +23,7 @@ class Book:
         self.number_of_book = input("\t Enter Number of the Book:")
 
     def show_book(self):
-        print("\t \t Book's ID: ", self.generate_id)
+        print("\t \t Book's ID: ", self.generate_id())
         print("\t \t Book's Name: ", self.title)
         print("\t \t Book's Author: ", self.author)
         print("\t \t Book's Category: ", self.subject)
@@ -37,20 +36,18 @@ class Library_Managements:
 
     def add_book(self, title, author, subject, number_of_page, number_of_book):
         # Tạo ID mới cho sách
-        book_id = Book.generate_id
-        book = Book(title, author, book_id, subject, number_of_page, number_of_book)
+        book = Book(title, author, number_of_book, subject, number_of_page)
         self.books.append(book)
 
     def display_books(self):
         # Hiển thị danh sách các cuốn sách trong thư viện
         for book in self.books:
-            print(f"ID: {book.book_id} | Title: {book.title} "
-                  f"| Author: {book.author} | Category: {book.subject} | Number: {book.number_of_book}")
+            print(f"ID: {book.id} | Title: {book.title} | Author: {book.author} | Category: {book.subject} | Number: {book.number_of_book}")
 
 
 class Search:
-    def __init__(self):
-        self.books = []
+    def __init__(self, books):
+        self.books = books
 
     def search_by_title(self, title):
         # Tìm kiếm các cuốn sách có tiêu đề phù hợp
@@ -64,7 +61,7 @@ class Search:
         # Tìm kiếm các cuốn sách có tên tác giả phù hợp
         matching_books = []
         for book in self.books:
-            if book.title == author:
+            if book.author == author:
                 matching_books.append(book)
         return matching_books
 
@@ -72,7 +69,7 @@ class Search:
         # Tìm kiếm các cuốn sách có danh mục phù hợp
         matching_books = []
         for book in self.books:
-            if book.title == subject:
+            if book.subject == subject:
                 matching_books.append(book)
         return matching_books
 
